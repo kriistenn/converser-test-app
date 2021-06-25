@@ -75,7 +75,7 @@ const ComponentInputs = (props) => {
               1{' '}
               {left !== undefined || left.length > 0
                 ? charCodeValue(left)
-                : 'RUR'}{' '}
+                : 'RUB'}{' '}
               =&nbsp;
             </p>
             <p className={style["converter-info-left-to"]}>
@@ -83,7 +83,7 @@ const ComponentInputs = (props) => {
               &nbsp;
               {right !== undefined || right.length > 0
                 ? charCodeValue(right)
-                : 'RUR'}
+                : 'RUB'}
             </p>
           </div>
           <div className={style["converter-info-right"]}>
@@ -91,7 +91,7 @@ const ComponentInputs = (props) => {
               1&nbsp;
               {right !== undefined || right.length > 0
                 ? charCodeValue(right)
-                : 'RUR'}{' '}
+                : 'RUB'}{' '}
               =&nbsp;
             </p>
             <p className={style["converter-info-right-to"]}>
@@ -99,7 +99,7 @@ const ComponentInputs = (props) => {
               &nbsp;
               {left !== undefined || left.length > 0
                 ? charCodeValue(left)
-                : 'RUR'}
+                : 'RUB'}
             </p>
           </div>
         </div>

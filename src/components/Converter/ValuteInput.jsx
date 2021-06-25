@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
-import useOutsideClick from './useOutsideClick';
 import Modal from './ModalWithValute/Modal';
 import { newGetData } from '../../store/selectors';
 import ValuteInputsItem from './ValuteInputsItem';
@@ -15,7 +14,6 @@ const ValuteInput = ({ onChange, newGetData }) => {
   const [valut, setValute] = useState('HUF');
   const list = Object.values({ ...newGetData.Valute });
 
-  useOutsideClick(ref, () => modalWindow && setModalWindow(false));
 
   const getVal = el => {
     setModalWindow(false);
