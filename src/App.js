@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, {useEffect} from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Converter from './components/Converter/Converter';
+import MainPage from './components/MainPage';
+import { useDispatch } from 'react-redux';
+import { loaderData } from './store/action';
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loaderData());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={MainPage} exact />
+          <Route path="/converter" component={Converter} exact />
+        </Switch>
+      </BrowserRouter>
   );
 }
 
